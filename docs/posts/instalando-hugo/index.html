@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalando Hugo en mi VM — Mi sitio web práctico — Manuel Miranda (2º ASIR)</title>
+    <meta name="description" content="Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)">
+    <link rel="stylesheet" href="/mini-sitio-hugo/css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/mini-sitio-hugo/">🚀 Mi sitio web práctico — Manuel Miranda (2º ASIR)</a></h1>
+        <p class="site-desc">Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)</p>
+        <nav>
+            <a href="/mini-sitio-hugo/">Inicio</a>
+            <a href="/mini-sitio-hugo/about/">Sobre mí</a>
+            <a href="/mini-sitio-hugo/contact/">Contacto</a>
+            <a href="/mini-sitio-hugo/posts/">Blog</a>
+            <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a>
+        </nav>
+    </header>
+    <div class="content">
+
+<span class="date">29/10/2026</span>
+<h1>Instalando Hugo en mi VM</h1>
+<p>Durante la práctica <strong>P1.2 de IAW</strong>, el primer paso consistió en instalar la versión <em>extended</em> de <strong>Hugo</strong> en nuestro entorno GNU/Linux y verificar su correcto funcionamiento desde la terminal.</p>
+<h2 id="proceso-de-instalación-paso-a-paso">Proceso de instalación paso a paso</h2>
+<p>Para disponer de una versión actualizada de Hugo que soporte todas las características modernas de plantillas, descargamos el paquete oficial desde el repositorio de lanzamientos en GitHub:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Comprobar la versión instalada de Hugo</span>
+</span></span><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Crear la estructura base de nuestro nuevo sitio web</span>
+</span></span><span style="display:flex;"><span>hugo new site mi-sitio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Levantar el servidor de desarrollo local incluyendo borradores</span>
+</span></span><span style="display:flex;"><span>cd mi-sitio
+</span></span><span style="display:flex;"><span>hugo server -D --watch
+</span></span></code></pre></div><p>Con el flag <code>--watch</code> activado, Hugo detecta en tiempo real cualquier cambio en <code>content/</code>, <code>layouts/</code> o <code>hugo.toml</code> y refresca automáticamente el navegador en <code>http://localhost:1313/</code>.</p>
+
+    </div>
+    <footer>
+        <p>&copy; 2026 Manuel Miranda Fernández | Práctica IAW — 2º ASIR | <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a></p>
+        <p>Construido con ❤️ y <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> · Desplegado en <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
+
