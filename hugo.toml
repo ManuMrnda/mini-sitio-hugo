@@ -1,7 +1,7 @@
 baseURL = "https://ManuMrnda.github.io/mini-sitio-hugo/"
 languageCode = "es"
 title = "Mi sitio web práctico — Manuel Miranda (2º ASIR)"
-publishDir = "docs"          # Carpeta servida por GitHub Pages (también sincronizada en html/)
+publishDir = "html"          # Hugo genera aquí el HTML estático (sincronizado también en docs/ para GitHub Pages)
 
 [params]
   description = "Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)"
