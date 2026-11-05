@@ -1,0 +1,5 @@
+{{ partial "header.html" . }}
+{{ if not .Date.IsZero }}<span class="date">{{ .Date.Format "02/01/2006" }}</span>{{ end }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ partial "footer.html" . }}

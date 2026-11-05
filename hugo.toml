@@ -1,0 +1,3 @@
+baseURL = "http://localhost:1313/"
+languageCode = "es"
+title = "Mi Sitio Hugo — IAW 2º ASIR"

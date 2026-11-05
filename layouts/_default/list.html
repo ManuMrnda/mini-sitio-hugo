@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+<h1>{{ .Title | default "Blog" }}</h1>
+{{ .Content }}
+<ul class="blog-list">
+  {{ range .RegularPages }}
+    <li>
+      {{ if not .Date.IsZero }}<span class="date">{{ .Date.Format "02/01/2006" }}</span>{{ end }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary | plainify | truncate 160 }}… <a href="{{ .RelPermalink }}">Leer más →</a></p>
+    </li>
+  {{ end }}
+</ul>
+{{ partial "footer.html" . }}

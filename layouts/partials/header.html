@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <link rel="stylesheet" href="{{ "css/estilo.css" | relURL }}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{ .Site.Home.RelPermalink }}">🚀 {{ .Site.Title }}</a></h1>
+        {{ with .Site.Params.description }}<p class="site-desc">{{ . }}</p>{{ end }}
+        <nav>
+            <a href="{{ .Site.Home.RelPermalink }}">Inicio</a>
+            <a href="{{ "about/" | relURL }}">Sobre mí</a>
+            <a href="{{ "contact/" | relURL }}">Contacto</a>
+            <a href="{{ "posts/" | relURL }}">Blog</a>
+            <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a>
+        </nav>
+    </header>
+    <div class="content">
