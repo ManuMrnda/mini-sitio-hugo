@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parciales en Hugo: reutiliza tu código — Mi sitio web práctico — Manuel Miranda (2º ASIR)</title>
+    <meta name="description" content="Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)">
+    <link rel="stylesheet" href="/mini-sitio-hugo/css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/mini-sitio-hugo/">🚀 Mi sitio web práctico — Manuel Miranda (2º ASIR)</a></h1>
+        <p class="site-desc">Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)</p>
+        <nav>
+            <a href="/mini-sitio-hugo/">Inicio</a>
+            <a href="/mini-sitio-hugo/about/">Sobre mí</a>
+            <a href="/mini-sitio-hugo/contact/">Contacto</a>
+            <a href="/mini-sitio-hugo/posts/">Blog</a>
+            <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a>
+        </nav>
+    </header>
+    <div class="content">
+
+<span class="date">29/10/2026</span>
+<h1>Parciales en Hugo: reutiliza tu código</h1>
+<p>Uno de los conceptos clave que hemos aprendido en las lecciones de <a href="https://hugocodex.org/es/empezando/">Hugo Codex</a> es el uso de <strong>plantillas parciales</strong> (<em>partials</em>) dentro del directorio <code>layouts/partials/</code>.</p>
+<h2 id="por-qué-usar-parciales">¿Por qué usar parciales?</h2>
+<p>En lugar de repetir la estructura de la cabecera (<code>&lt;head&gt;</code>, barra de navegación <code>&lt;nav&gt;</code>, hoja de estilos) y el pie de página (<code>&lt;footer&gt;</code>) en cada una de las plantillas (<code>home.html</code>, <code>single.html</code>, <code>list.html</code>), extraemos esos fragmentos a archivos independientes:</p>
+<ul>
+<li><code>layouts/partials/header.html</code>: contiene los metadatos, el enlace a la hoja de estilos mediante <code>relURL</code> y el menú de navegación principal.</li>
+<li><code>layouts/partials/footer.html</code>: incluye la información de autoría de <strong>Manuel Miranda Fernández</strong>, enlaces rápidos y cierre del documento HTML.</li>
+</ul>
+<p>Para incluirlos en cualquier plantilla de Hugo simplemente utilizamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-go-html-template" data-lang="go-html-template"><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;header.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Contenido específico de la plantilla --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">{{</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;footer.html&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#75715e">}}</span>
+</span></span></code></pre></div><p>De este modo mantenemos el principio <strong>DRY</strong> (<em>Don&rsquo;t Repeat Yourself</em>) y la filosofía <strong>KISS</strong> en todo nuestro proyecto web.</p>
+
+    </div>
+    <footer>
+        <p>&copy; 2026 Manuel Miranda Fernández | Práctica IAW — 2º ASIR | <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a></p>
+        <p>Construido con ❤️ y <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> · Desplegado en <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
+

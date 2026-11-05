@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Mi sitio web práctico — Manuel Miranda (2º ASIR)</title>
+		<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/</link>
+		<description>Recent content in Posts on Mi sitio web práctico — Manuel Miranda (2º ASIR)</description>
+		<generator>Hugo</generator>
+		<language>es</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 29 Oct 2026 14:00:00 +0100</lastBuildDate>
+		
+			<atom:link href="https://ManuMrnda.github.io/mini-sitio-hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Parciales en Hugo: reutiliza tu código</title>
+				<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/parciales-en-hugo/</link>
+				<pubDate>Thu, 29 Oct 2026 14:00:00 +0100</pubDate>
+				<guid>https://ManuMrnda.github.io/mini-sitio-hugo/posts/parciales-en-hugo/</guid>
+				<description>&lt;p&gt;Uno de los conceptos clave que hemos aprendido en las lecciones de &lt;a href=&#34;https://hugocodex.org/es/empezando/&#34;&gt;Hugo Codex&lt;/a&gt; es el uso de &lt;strong&gt;plantillas parciales&lt;/strong&gt; (&lt;em&gt;partials&lt;/em&gt;) dentro del directorio &lt;code&gt;layouts/partials/&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;por-qué-usar-parciales&#34;&gt;¿Por qué usar parciales?&lt;/h2&gt;&#xA;&lt;p&gt;En lugar de repetir la estructura de la cabecera (&lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;, barra de navegación &lt;code&gt;&amp;lt;nav&amp;gt;&lt;/code&gt;, hoja de estilos) y el pie de página (&lt;code&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;) en cada una de las plantillas (&lt;code&gt;home.html&lt;/code&gt;, &lt;code&gt;single.html&lt;/code&gt;, &lt;code&gt;list.html&lt;/code&gt;), extraemos esos fragmentos a archivos independientes:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;layouts/partials/header.html&lt;/code&gt;: contiene los metadatos, el enlace a la hoja de estilos mediante &lt;code&gt;relURL&lt;/code&gt; y el menú de navegación principal.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;layouts/partials/footer.html&lt;/code&gt;: incluye la información de autoría de &lt;strong&gt;Manuel Miranda Fernández&lt;/strong&gt;, enlaces rápidos y cierre del documento HTML.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Para incluirlos en cualquier plantilla de Hugo simplemente utilizamos:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Instalando Hugo en mi VM</title>
+				<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/instalando-hugo/</link>
+				<pubDate>Thu, 29 Oct 2026 12:00:00 +0100</pubDate>
+				<guid>https://ManuMrnda.github.io/mini-sitio-hugo/posts/instalando-hugo/</guid>
+				<description>&lt;p&gt;Durante la práctica &lt;strong&gt;P1.2 de IAW&lt;/strong&gt;, el primer paso consistió en instalar la versión &lt;em&gt;extended&lt;/em&gt; de &lt;strong&gt;Hugo&lt;/strong&gt; en nuestro entorno GNU/Linux y verificar su correcto funcionamiento desde la terminal.&lt;/p&gt;&#xA;&lt;h2 id=&#34;proceso-de-instalación-paso-a-paso&#34;&gt;Proceso de instalación paso a paso&lt;/h2&gt;&#xA;&lt;p&gt;Para disponer de una versión actualizada de Hugo que soporte todas las características modernas de plantillas, descargamos el paquete oficial desde el repositorio de lanzamientos en GitHub:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Comprobar la versión instalada de Hugo&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Crear la estructura base de nuestro nuevo sitio web&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site mi-sitio&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Levantar el servidor de desarrollo local incluyendo borradores&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd mi-sitio&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D --watch&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el flag &lt;code&gt;--watch&lt;/code&gt; activado, Hugo detecta en tiempo real cualquier cambio en &lt;code&gt;content/&lt;/code&gt;, &lt;code&gt;layouts/&lt;/code&gt; o &lt;code&gt;hugo.toml&lt;/code&gt; y refresca automáticamente el navegador en &lt;code&gt;http://localhost:1313/&lt;/code&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>¡Hola Mundo! Mi primer post con Hugo</title>
+				<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/hola-mundo/</link>
+				<pubDate>Thu, 29 Oct 2026 10:00:00 +0100</pubDate>
+				<guid>https://ManuMrnda.github.io/mini-sitio-hugo/posts/hola-mundo/</guid>
+				<description>&lt;p&gt;¡Bienvenido al blog de mi mini sitio web para el módulo de &lt;strong&gt;Implantación de Aplicaciones Web (IAW)&lt;/strong&gt; en 2º de ASIR!&lt;/p&gt;&#xA;&lt;p&gt;En esta primera entrada inauguramos la sección de artículos estáticos generados con &lt;strong&gt;Hugo&lt;/strong&gt;. A diferencia de los gestores de contenido dinámicos tradicionales que requieren PHP y una base de datos MySQL/MariaDB en cada petición, Hugo compila todo nuestro contenido escrito en &lt;strong&gt;Markdown&lt;/strong&gt; (&lt;code&gt;content/&lt;/code&gt;) junto con las plantillas HTML (&lt;code&gt;layouts/&lt;/code&gt;) para generar un sitio web estático completo en milisegundos.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
