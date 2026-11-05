@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplegando nuestro sitio Hugo en GitHub Pages (P1.3) — Mi sitio web práctico — Manuel Miranda (2º ASIR)</title>
+    <meta name="description" content="Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)">
+    <link rel="stylesheet" href="/mini-sitio-hugo/css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/mini-sitio-hugo/">🚀 Mi sitio web práctico — Manuel Miranda (2º ASIR)</a></h1>
+        <p class="site-desc">Ejercicio de publicación con Hugo y GitHub Pages — Implantación de Aplicaciones Web (IAW)</p>
+        <nav>
+            <a href="/mini-sitio-hugo/">Inicio</a>
+            <a href="/mini-sitio-hugo/about/">Sobre mí</a>
+            <a href="/mini-sitio-hugo/contact/">Contacto</a>
+            <a href="/mini-sitio-hugo/posts/">Blog</a>
+            <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a>
+        </nav>
+    </header>
+    <div class="content">
+
+<span class="date">05/11/2026</span>
+<h1>Desplegando nuestro sitio Hugo en GitHub Pages (P1.3)</h1>
+<p>En esta práctica (<strong>P1.3 / PrácticaX2</strong>) damos el salto desde el entorno de desarrollo local (<code>hugo server -D</code>) a la publicación real en Internet utilizando el servicio gratuito <strong>GitHub Pages</strong>.</p>
+<h2 id="pasos-clave-del-despliegue-estático">Pasos clave del despliegue estático</h2>
+<ol>
+<li><strong>Configuración en <code>hugo.toml</code></strong>:
+<ul>
+<li>Definimos <code>baseURL = &quot;https://ManuMrnda.github.io/mini-sitio-hugo/&quot;</code> incluyendo la subruta del repositorio.</li>
+<li>Configuramos <code>publishDir = &quot;html&quot;</code> para que Hugo genere el HTML estático directamente en la carpeta <code>/html</code> que servirá GitHub Pages.</li>
+</ul>
+</li>
+<li><strong>Desactivar Jekyll con <code>.nojekyll</code></strong>:
+<ul>
+<li>Creamos <code>static/.nojekyll</code> para que Hugo lo copie a <code>html/.nojekyll</code> y GitHub sirva los archivos estáticos tal cual, sin procesarlos con Jekyll.</li>
+</ul>
+</li>
+<li><strong>Rutas relativas seguras con <code>relURL</code></strong>:
+<ul>
+<li>Todas las referencias a hojas de estilos (<code>{{ &quot;css/estilo.css&quot; | relURL }}</code>) y enlaces de navegación usan las funciones nativas de Hugo para funcionar tanto en local como bajo la subruta <code>/mini-sitio-hugo/</code>.</li>
+</ul>
+</li>
+<li><strong>Flujo de publicación con Git</strong>:
+<ul>
+<li>Ejecutamos <code>hugo</code> para compilar los cambios en <code>html/</code>, realizamos <code>git add .</code>, <code>git commit</code> y <code>git push</code> hacia la rama <code>main</code>.</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+    <footer>
+        <p>&copy; 2026 Manuel Miranda Fernández | Práctica IAW — 2º ASIR | <a href="https://github.com/ManuMrnda" target="_blank" rel="noopener">GitHub @ManuMrnda</a></p>
+        <p>Construido con ❤️ y <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> · Desplegado en <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+    </footer>
+</body>
+</html>
+

@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 29 Oct 2026 14:00:00 +0100</lastBuildDate>
+			<lastBuildDate>Thu, 05 Nov 2026 16:15:00 +0100</lastBuildDate>
 		
 			<atom:link href="https://ManuMrnda.github.io/mini-sitio-hugo/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Desplegando nuestro sitio Hugo en GitHub Pages (P1.3)</title>
+				<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/despliegue-github-pages/</link>
+				<pubDate>Thu, 05 Nov 2026 16:15:00 +0100</pubDate>
+				<guid>https://ManuMrnda.github.io/mini-sitio-hugo/posts/despliegue-github-pages/</guid>
+				<description>&lt;p&gt;En esta práctica (&lt;strong&gt;P1.3 / PrácticaX2&lt;/strong&gt;) damos el salto desde el entorno de desarrollo local (&lt;code&gt;hugo server -D&lt;/code&gt;) a la publicación real en Internet utilizando el servicio gratuito &lt;strong&gt;GitHub Pages&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pasos-clave-del-despliegue-estático&#34;&gt;Pasos clave del despliegue estático&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Configuración en &lt;code&gt;hugo.toml&lt;/code&gt;&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Definimos &lt;code&gt;baseURL = &amp;quot;https://ManuMrnda.github.io/mini-sitio-hugo/&amp;quot;&lt;/code&gt; incluyendo la subruta del repositorio.&lt;/li&gt;&#xA;&lt;li&gt;Configuramos &lt;code&gt;publishDir = &amp;quot;html&amp;quot;&lt;/code&gt; para que Hugo genere el HTML estático directamente en la carpeta &lt;code&gt;/html&lt;/code&gt; que servirá GitHub Pages.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Desactivar Jekyll con &lt;code&gt;.nojekyll&lt;/code&gt;&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Creamos &lt;code&gt;static/.nojekyll&lt;/code&gt; para que Hugo lo copie a &lt;code&gt;html/.nojekyll&lt;/code&gt; y GitHub sirva los archivos estáticos tal cual, sin procesarlos con Jekyll.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Rutas relativas seguras con &lt;code&gt;relURL&lt;/code&gt;&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Todas las referencias a hojas de estilos (&lt;code&gt;{{ &amp;quot;css/estilo.css&amp;quot; | relURL }}&lt;/code&gt;) y enlaces de navegación usan las funciones nativas de Hugo para funcionar tanto en local como bajo la subruta &lt;code&gt;/mini-sitio-hugo/&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Flujo de publicación con Git&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ejecutamos &lt;code&gt;hugo&lt;/code&gt; para compilar los cambios en &lt;code&gt;html/&lt;/code&gt;, realizamos &lt;code&gt;git add .&lt;/code&gt;, &lt;code&gt;git commit&lt;/code&gt; y &lt;code&gt;git push&lt;/code&gt; hacia la rama &lt;code&gt;main&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+			</item>
 			<item>
 				<title>Parciales en Hugo: reutiliza tu código</title>
 				<link>https://ManuMrnda.github.io/mini-sitio-hugo/posts/parciales-en-hugo/</link>
